@@ -1,10 +1,10 @@
-import { AlertAction, AlertState, SET_ALERT } from "../types"
+import { AlertState, AlertAction, SET_ALERT } from "../types";
 
 const initialState: AlertState = {
     message: ''
 }
 
-export default (state = initialState, action: AlertAction): AlertState => {
+const alertReducer = (state = initialState, action: AlertAction): AlertState => {
     switch (action.type) {
         case SET_ALERT:
             return {
@@ -14,3 +14,5 @@ export default (state = initialState, action: AlertAction): AlertState => {
             return state;
     }
 }
+
+export default alertReducer;

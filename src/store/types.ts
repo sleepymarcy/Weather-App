@@ -4,7 +4,7 @@ export const SET_ERROR = 'SET_ERROR'
 export const SET_ALERT = 'SET_ALERT'
 
 export interface Weather {
-    descripton: string;
+    description: string;
     icon: string,
     id: number,
     main: string;

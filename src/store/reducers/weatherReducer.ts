@@ -6,7 +6,7 @@ const initialState: WeatherState = {
     error: ''
 }
 
-export default (state = initialState, action: WeatherAction): WeatherState => {
+const weatherReducer = (state = initialState, action: WeatherAction): WeatherState => {
     switch (action.type) {
         case GET_WEATHER:
             return {
@@ -30,3 +30,5 @@ export default (state = initialState, action: WeatherAction): WeatherState => {
             return state;
     }
 }
+
+export default weatherReducer
