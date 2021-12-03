@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { setAlert } from '../store/actions/alertActions';
 import { getWeather, setLoading } from '../store/actions/weatherActions';
 
+
 interface SearchProps {
     title: string;
 }
@@ -29,10 +30,10 @@ const Search: FC<SearchProps> = ({ title }) => {
     }
 
     return (
-        <div className="hero is-light has-text-centered">
+        <div className="has-text-centered" style={{backgroundImage: `url(${"https://www.maketecheasier.com/assets/uploads/2020/06/Featured-Image-Live-Weather-Wallpapers-Android.jpg"})`}}>
             <div className="hero-body">
                 <div className="container">
-                    <h1 className="title">{title}</h1>
+                    <h1 className="title is-1" style={{color: 'white'}}>{title}</h1>
                     <form className="py-5" onSubmit={submitHandler}>
                         <input
                             type="text"
@@ -42,7 +43,7 @@ const Search: FC<SearchProps> = ({ title }) => {
                             value={city}
                             onChange={changeHandler}
                         />
-                        <button className="button is-primary is-fullwidth" style={{ maxWidth: 300, margin: '0 auto' }}>Search</button>
+                        <button className="button is-info is-light is-fullwidth" style={{ maxWidth: 300, margin: '0 auto' }}>Search</button>
                     </form>
                 </div>
             </div>
